@@ -2,15 +2,17 @@
 
 ## Music Generation
 
-Ключевыми инструментами в данном коде являются: **MuseScore 3**, **fluidsynth**, **pyfluidsynth**, **Music21** и **pretty_midi**.
+[![ru](https://img.shields.io/badge/README_на_русском-2A2C39?style=for-the-badge&logo=github&logoColor=white)](README.ru.md)  
 
-Особенность такого подхода в решении задачи в том, что здесь реализована `temperature` - температура модели. Температура модели влияет на генерацию. Более низкие температуры соответствуют более точному предсказанию, а более высокие температуры приводят к более случайной генерации.
+The key tools in this code are: **MuseScore 3**, **fluidsynth**, **pyfluidsynth**, **Music21**, and **pretty_midi**.
 
-Также используются для обучения модели три переменные для представления ноты: `pitch`, `step` и `duration`. Высота звука (`pitch`) - это качество восприятия звука в виде номера ноты в формате **MIDI**. Шаг (`step`) - это время, прошедшее с предыдущей ноты или начала трека. Длительность (`duration`) - это продолжительность воспроизведения ноты в секундах и разница между временем окончания и началом ноты.
+The peculiarity of this approach to solving the problem is that here is implemented `temperature` - the temperature of the model. The temperature of the model affects the generation. Lower temperatures correspond to a more accurate prediction, and higher temperatures lead to a more random generation.
 
-Особенностью архитектуры модели в том, что она основана на рекуррентных слоях (**RNN**).
+Three variables are also used to train the model to represent a note: `pitch`, `step`, and `duration`. The pitch (`pitch`) is the quality of the sound as a note number in the **MIDI** format. The step (`step`) is the time elapsed since the previous note or the beginning of the track. The duration (`duration`) is the length of the note in seconds and the difference between the end and start times of the note.
 
-[Датасет](https://storage.yandexcloud.net/academy.ai/classical-music-midi.zip) с музыкальными произведениями известных композиторов.
+The model's architecture is based on recurrent layers (**RNN**).
 
-> Для запуска этого кода рекомендую использовать **графический ускоритель**
-> **T4** или лучше!
+[Dataset](https://storage.yandexcloud.net/academy.ai/classical-music-midi.zip) with musical works by famous composers.
+
+> To run this code, I recommend using a **graphics accelerator**
+>  **T4** or better!
